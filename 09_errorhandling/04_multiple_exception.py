@@ -1,0 +1,12 @@
+def process_order(item,quantity):
+    try:
+        price = {"masla":20}[item]
+        cost = price * quantity
+        price(f"total cose is {cost}")
+    except KeyError:
+        print("Sorry that chai is not on menu")
+    except TypeError:
+        print("Quantity must be in number")
+
+process_order("ginger",2)
+process_order("masala","two")
